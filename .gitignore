@@ -3,3 +3,4 @@
 wrangler.toml
 test*
 node_modules
+.DS_Store
