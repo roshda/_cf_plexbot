@@ -1,0 +1,4 @@
+.env
+.wrangler
+wrangler.toml
+test*
