@@ -4,9 +4,7 @@
 wrangler.toml
 test*
 node_modules
-dist
 build
-coverage
 *.log
 .npmrc
 .DS_Store
