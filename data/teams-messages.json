@@ -1,0 +1,167 @@
+[
+  {
+    "id": "teams_001",
+    "source_type": "teams",
+    "source_id": "19:8b9c1234567890abcdef@thread.tacv2_1643723400.001",
+    "title": "VPN connection issues in enterprise environment",
+    "content": "@IT-Support We're experiencing intermittent VPN connection drops for remote workers. Users report getting disconnected every 20-30 minutes, then having to reconnect manually.\n\nAffected users: ~50 remote employees\nEnvironment: Windows 10/11 with company-issued laptops\nVPN Client: PlexNet VPN v2.1.3\n\nUsers are frustrated as this is disrupting their work. Any known issues or fixes?",
+    "author": "IT-Helpdesk",
+    "author_email": "helpdesk@enterprise.com",
+    "created_at": "2024-12-02T08:15:00Z",
+    "metadata": {
+      "channel": "IT Support",
+      "team": "Enterprise IT",
+      "thread_id": "19:8b9c1234567890abcdef@thread.tacv2",
+      "replies": [
+        {
+          "author": "Network-Admin",
+          "content": "This sounds like the keep-alive timeout issue we saw last month. Try increasing the keep-alive interval in the VPN settings. Also, check if users are on unstable internet connections.",
+          "created_at": "2024-12-02T08:30:00Z"
+        },
+        {
+          "author": "IT-Helpdesk",
+          "content": "Thanks! We'll try that. Also noticed this started after the recent Windows security updates. Could be related?",
+          "created_at": "2024-12-02T08:45:00Z"
+        },
+        {
+          "author": "Security-Team",
+          "content": "Possibly. The latest Windows updates changed some VPN handling. We're testing a compatibility fix that should be in the next patch.",
+          "created_at": "2024-12-02T09:00:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "teams_002",
+    "source_type": "teams",
+    "source_id": "19:9d0d2345678901bcdefg@thread.tacv2_1643724000.001",
+    "title": "Request for automated reporting features",
+    "content": "Hi @Product-Team,\n\nOur compliance team is asking for automated weekly/monthly network performance reports. Currently, they have to manually export data from the dashboard and create reports in Excel.\n\nRequired features:\n• Scheduled PDF/Excel report generation\n• Custom report templates\n• Email delivery to stakeholders\n• Historical trend analysis\n• Compliance-specific metrics (uptime, security events, etc.)\n\nThis would save our team several hours per month. Is this something we could add to the roadmap?",
+    "author": "Compliance-Officer",
+    "author_email": "compliance@enterprise.com",
+    "created_at": "2024-12-02T10:20:00Z",
+    "metadata": {
+      "channel": "Product Feedback",
+      "team": "Enterprise IT",
+      "thread_id": "19:9d0d2345678901bcdefg@thread.tacv2",
+      "replies": [
+        {
+          "author": "Product-Manager",
+          "content": "Great feedback! We actually have automated reporting on our Q1 roadmap. Would love to understand your specific requirements better. What compliance standards are you preparing reports for?",
+          "created_at": "2024-12-02T10:45:00Z"
+        },
+        {
+          "author": "Compliance-Officer",
+          "content": "Primarily SOX and PCI-DSS compliance. We need uptime reports, security incident summaries, and performance metrics. PDF format preferred for audit trails.",
+          "created_at": "2024-12-02T11:00:00Z"
+        },
+        {
+          "author": "Dev-Team",
+          "content": "We could leverage our existing analytics engine for this. Shouldn't be too complex to implement scheduled report generation.",
+          "created_at": "2024-12-02T11:15:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "teams_003",
+    "source_type": "teams",
+    "source_id": "19:0e1e3456789012cdefgh@thread.tacv2_1643725200.001",
+    "title": "Critical: Data center monitoring outage",
+    "content": "🚨 CRITICAL ALERT 🚨\n\nThe monitoring system for our primary data center is completely down. No alerts, no dashboard access, no data collection since 2:30 AM EST.\n\nImpact:\n• Unable to monitor 200+ critical servers\n• No visibility into network performance\n• Delayed incident response\n\n@Engineering @Infrastructure Please investigate immediately. This is affecting production systems.",
+    "author": "Data-Center-Manager",
+    "author_email": "datacenter@enterprise.com",
+    "created_at": "2024-12-02T14:30:00Z",
+    "metadata": {
+      "channel": "Infrastructure",
+      "team": "Enterprise IT",
+      "thread_id": "19:0e1e3456789012cdefgh@thread.tacv2",
+      "replies": [
+        {
+          "author": "Infrastructure-Eng",
+          "content": "Checking the monitoring server now. I can see it's unresponsive. Last logs show a database connection issue. Attempting restart...",
+          "created_at": "2024-12-02T14:32:00Z"
+        },
+        {
+          "author": "Database-Admin",
+          "content": "Database is up but connection pool is exhausted. Looks like a memory leak in the monitoring agent. Applying emergency patch.",
+          "created_at": "2024-12-02T14:35:00Z"
+        },
+        {
+          "author": "Data-Center-Manager",
+          "content": "Thanks for the quick response. Please keep us updated. Do we have any backup monitoring in place?",
+          "created_at": "2024-12-02T14:40:00Z"
+        },
+        {
+          "author": "Infrastructure-Eng",
+          "content": "Service is back up. Root cause was a memory leak in the SNMP polling module. We'll monitor closely and implement a permanent fix.",
+          "created_at": "2024-12-02T15:00:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "teams_004",
+    "source_type": "teams",
+    "source_id": "19:1f2f4567890123defghi@thread.tacv2_1643726400.001",
+    "title": "Mobile app feature request: Offline mode",
+    "content": "@Mobile-Team Our field technicians need offline access to network device information when working in areas without cellular coverage.\n\nCurrent issue: App requires constant internet connection to view device details and historical data.\n\nRequested features:\n• Cache device information locally\n• Offline viewing of recent performance data\n• Queue configuration changes for sync when online\n• Visual indicator of online/offline status\n\nThis would greatly improve productivity for our technicians working in remote locations.",
+    "author": "Field-Operations",
+    "author_email": "fieldops@enterprise.com",
+    "created_at": "2024-12-02T17:00:00Z",
+    "metadata": {
+      "channel": "Mobile App",
+      "team": "Enterprise IT",
+      "thread_id": "19:1f2f4567890123defghi@thread.tacv2",
+      "replies": [
+        {
+          "author": "Mobile-Dev-Lead",
+          "content": "This is a great request and something we've been considering. The main challenge is synchronizing data reliably. We could implement a local SQLite database with periodic sync. What data would be most critical to cache offline?",
+          "created_at": "2024-12-02T17:20:00Z"
+        },
+        {
+          "author": "Field-Operations",
+          "content": "Device inventory, recent alerts, basic performance metrics (last 24 hours), and configuration templates. Historical data beyond 24 hours can stay online-only.",
+          "created_at": "2024-12-02T17:35:00Z"
+        },
+        {
+          "author": "Product-Manager",
+          "content": "This aligns well with our mobile strategy. Let's prioritize this for the next sprint. Could be a key differentiator for field service organizations.",
+          "created_at": "2024-12-02T18:00:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "teams_005",
+    "source_type": "teams",
+    "source_id": "19:2g3g5678901234efghij@thread.tacv2_1643727000.001",
+    "title": "Security concern: Default credentials in demo environment",
+    "content": "⚠️ SECURITY CONCERN ⚠️\n\nOur security audit found that the demo/test environment is using default admin credentials (admin/admin). This poses a risk if the demo environment is internet-facing.\n\nIssues identified:\n• Default password not changed\n• No password complexity requirements\n• Admin account has excessive privileges\n• No account lockout policy\n\n@Security-Team @DevOps Please review and remediate immediately. This could be a compliance violation.",
+    "author": "Security-Auditor",
+    "author_email": "security@enterprise.com",
+    "created_at": "2024-12-02T18:30:00Z",
+    "metadata": {
+      "channel": "Security",
+      "team": "Enterprise IT",
+      "thread_id": "19:2g3g5678901234efghij@thread.tacv2",
+      "replies": [
+        {
+          "author": "DevOps-Lead",
+          "content": "Thank you for catching this. The demo environment should not be internet-facing. Let me check the firewall rules and ensure it's properly isolated.",
+          "created_at": "2024-12-02T18:35:00Z"
+        },
+        {
+          "author": "Security-Team",
+          "content": "This is concerning. We'll need to implement proper credential management for all environments. Should also add automated checks to prevent default credentials in production.",
+          "created_at": "2024-12-02T18:45:00Z"
+        },
+        {
+          "author": "Compliance-Officer",
+          "content": "This needs to be documented in our security incident log. Please provide a remediation plan by EOD.",
+          "created_at": "2024-12-02T19:00:00Z"
+        }
+      ]
+    }
+  }
+]

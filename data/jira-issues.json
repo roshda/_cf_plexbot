@@ -1,0 +1,137 @@
+[
+  {
+    "id": "jira_001",
+    "source_type": "jira",
+    "source_id": "NET-1234",
+    "title": "Dashboard crashes when viewing wireless network topology",
+    "content": "Steps to reproduce:\n1. Navigate to Network Topology view\n2. Select 'Wireless' filter\n3. Click on any access point\n4. Dashboard becomes unresponsive and eventually crashes\n\nExpected behavior: Should display detailed AP information\nActual behavior: Browser tab freezes, then crashes\n\nEnvironment:\n- PlexNet v2.3.1\n- Chrome 119.0.6045.159\n- Windows 11 Pro\n- Network: 45 access points, 1200+ connected devices\n\nStack trace attached. This is blocking our wireless network monitoring capabilities.\n\nPriority: Critical\nAssignee: dev-team\nLabels: bug, wireless, dashboard, crash",
+    "author": "Lisa Wang",
+    "author_email": "lisa.wang@plexnet.com",
+    "created_at": "2024-11-28T10:15:00Z",
+    "metadata": {
+      "issue_type": "Bug",
+      "status": "Open",
+      "priority": "Critical",
+      "assignee": "dev-team",
+      "labels": ["bug", "wireless", "dashboard", "crash"],
+      "components": ["Dashboard", "Wireless Monitoring"],
+      "attachments": ["crash_log_20241128.txt", "browser_console.log"],
+      "comments": [
+        {
+          "author": "dev-team",
+          "content": "Can reproduce the issue. Appears to be a memory leak in the topology renderer when handling large wireless networks.",
+          "created_at": "2024-11-28T11:30:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "jira_002",
+    "source_type": "jira",
+    "source_id": "NET-1235",
+    "title": "Add support for SNMP v3 authentication",
+    "content": "As a network administrator, I need to monitor devices that require SNMP v3 authentication with SHA-256 hashing and AES-256 encryption.\n\nCurrently, PlexNet only supports SNMP v1/v2c and basic v3 with MD5/DES. Modern enterprise networks require stronger security protocols.\n\nRequirements:\n- SHA-256 authentication\n- AES-256 privacy\n- Support for multiple authentication protocols\n- Backward compatibility with existing SNMP v1/v2c\n\nThis is needed for compliance with our enterprise security standards.\n\nPriority: High\nAssignee: backend-team\nLabels: feature, snmp, security, enterprise",
+    "author": "Marcus Johnson",
+    "author_email": "marcus.johnson@plexnet.com",
+    "created_at": "2024-11-29T14:20:00Z",
+    "metadata": {
+      "issue_type": "Story",
+      "status": "In Progress",
+      "priority": "High",
+      "assignee": "backend-team",
+      "labels": ["feature", "snmp", "security", "enterprise"],
+      "components": ["SNMP Monitoring", "Security"],
+      "attachments": [],
+      "comments": [
+        {
+          "author": "backend-team",
+          "content": "Working on the implementation. Planning to use net-snmp library for v3 support.",
+          "created_at": "2024-11-30T09:15:00Z"
+        },
+        {
+          "author": "qa-team",
+          "content": "Test cases drafted. Need to verify compatibility with major network vendors (Cisco, Juniper, etc.)",
+          "created_at": "2024-12-01T16:45:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "jira_003",
+    "source_type": "jira",
+    "source_id": "NET-1236",
+    "title": "Mobile app shows incorrect bandwidth usage",
+    "content": "The mobile app displays bandwidth usage that's 3-4x higher than the actual usage shown in the web dashboard.\n\nSteps to reproduce:\n1. Open mobile app on iOS/Android\n2. View bandwidth usage for any device\n3. Compare with web dashboard for same device/time period\n\nThe discrepancy seems to be in the data aggregation logic. Mobile app appears to be double-counting some traffic.\n\nEnvironment:\n- Mobile app v1.2.1\n- iOS 17.2 / Android 14\n- Backend API v2.3.1\n\nThis is causing confusion for field technicians who rely on the mobile app for quick checks.\n\nPriority: High\nAssignee: mobile-team\nLabels: bug, mobile, bandwidth, data-accuracy",
+    "author": "Sophie Patel",
+    "author_email": "sophie.patel@plexnet.com",
+    "created_at": "2024-11-30T08:45:00Z",
+    "metadata": {
+      "issue_type": "Bug",
+      "status": "In Review",
+      "priority": "High",
+      "assignee": "mobile-team",
+      "labels": ["bug", "mobile", "bandwidth", "data-accuracy"],
+      "components": ["Mobile App", "Data Processing"],
+      "attachments": ["bandwidth_comparison_screenshots.zip"],
+      "comments": [
+        {
+          "author": "mobile-team",
+          "content": "Found the issue in the data aggregation query. The mobile API was including both inbound and outbound traffic twice. Fix implemented.",
+          "created_at": "2024-12-01T13:20:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "jira_004",
+    "source_type": "jira",
+    "source_id": "NET-1237",
+    "title": "Implement automated network discovery",
+    "content": "We need an automated network discovery feature that can:\n\n1. Scan IP ranges to find active devices\n2. Auto-detect device types (routers, switches, servers, etc.)\n3. Identify device capabilities and supported protocols\n4. Create device profiles automatically\n5. Update inventory without manual intervention\n\nThis would significantly reduce the setup time for new deployments and help maintain accurate network inventories.\n\nTechnical requirements:\n- Support for CIDR notation for IP ranges\n- SNMP-based device identification\n- LLDP/CDP protocol support\n- Integration with existing device database\n- Background scheduling for periodic scans\n\nPriority: Medium\nAssignee: backend-team\nLabels: feature, automation, network-discovery, inventory",
+    "author": "Tom Anderson",
+    "author_email": "tom.anderson@plexnet.com",
+    "created_at": "2024-12-01T15:30:00Z",
+    "metadata": {
+      "issue_type": "Epic",
+      "status": "Open",
+      "priority": "Medium",
+      "assignee": "backend-team",
+      "labels": ["feature", "automation", "network-discovery", "inventory"],
+      "components": ["Network Discovery", "Device Management"],
+      "attachments": ["discovery_requirements.pdf"],
+      "comments": [
+        {
+          "author": "product-team",
+          "content": "This aligns well with our roadmap for reducing deployment friction. Should prioritize for Q1.",
+          "created_at": "2024-12-02T10:00:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "jira_005",
+    "source_type": "jira",
+    "source_id": "NET-1238",
+    "title": "Database connection pooling causing memory leaks",
+    "content": "We've identified a memory leak in the database connection pooling mechanism. Memory usage grows steadily over time, eventually requiring service restart.\n\nAnalysis shows:\n- Connection pool size not being properly managed\n- Prepared statements accumulating without cleanup\n- No connection timeout enforcement\n\nThis affects both the main application and background workers. Memory usage increases by ~50MB per day under normal load.\n\nEnvironment:\n- PostgreSQL 15.3\n- Connection pool size: 20\n- Application server: 8GB RAM\n\nLogs show increasing 'out of memory' errors during peak usage.\n\nPriority: Critical\nAssignee: infra-team\nLabels: bug, database, memory-leak, performance",
+    "author": "Kevin Zhang",
+    "author_email": "kevin.zhang@plexnet.com",
+    "created_at": "2024-12-02T07:15:00Z",
+    "metadata": {
+      "issue_type": "Bug",
+      "status": "Open",
+      "priority": "Critical",
+      "assignee": "infra-team",
+      "labels": ["bug", "database", "memory-leak", "performance"],
+      "components": ["Database", "Infrastructure"],
+      "attachments": ["memory_usage_graphs.png", "db_connection_logs.txt"],
+      "comments": [
+        {
+          "author": "infra-team",
+          "content": "Reproducing the issue in staging environment. Connection pool configuration needs adjustment.",
+          "created_at": "2024-12-02T09:45:00Z"
+        }
+      ]
+    }
+  }
+]

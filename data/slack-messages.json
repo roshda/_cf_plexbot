@@ -1,0 +1,152 @@
+[
+  {
+    "id": "slack_001",
+    "source_type": "slack",
+    "source_id": "C1234567890_1643723400.001",
+    "title": "Customer reporting dashboard login issues",
+    "content": "@support-team We just got a call from a customer at MegaCorp. They're saying they can't log into the dashboard after the latest update. Anyone seen this before?\n\nThey mentioned getting a 'Invalid token' error. Using SSO with Azure AD.",
+    "author": "customer-success",
+    "author_email": "cs@plexnet.com",
+    "created_at": "2024-12-01T09:30:00Z",
+    "metadata": {
+      "channel": "support",
+      "channel_id": "C1234567890",
+      "thread_ts": "1643723400.001",
+      "replies": [
+        {
+          "author": "dev-support",
+          "content": "Yeah, we pushed a fix for that Azure AD token validation issue yesterday. Should be resolved now. Can you ask them to try again?",
+          "created_at": "2024-12-01T09:32:00Z"
+        },
+        {
+          "author": "customer-success",
+          "content": "Will do! Thanks for the quick response.",
+          "created_at": "2024-12-01T09:35:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "slack_002",
+    "source_type": "slack",
+    "source_id": "C2345678901_1643724000.001",
+    "title": "New feature idea: Network topology visualization",
+    "content": "Hey @product-team, I was just thinking... what if we added an interactive network topology map to the dashboard? Like a visual representation of all devices, connections, and traffic flows?\n\nCould be really useful for quickly understanding network architecture and troubleshooting connectivity issues.\n\nWhat do you think? Should I create a feature request ticket?",
+    "author": "network-engineer",
+    "author_email": "neteng@plexnet.com",
+    "created_at": "2024-12-01T10:45:00Z",
+    "metadata": {
+      "channel": "product-feedback",
+      "channel_id": "C2345678901",
+      "thread_ts": "1643724000.001",
+      "replies": [
+        {
+          "author": "product-manager",
+          "content": "Love this idea! We actually have something similar on our roadmap for Q2. But I'd love to hear more about your specific use cases. What would you want to see on this topology map?",
+          "created_at": "2024-12-01T11:00:00Z"
+        },
+        {
+          "author": "network-engineer",
+          "content": "Definitely device types, link speeds, current utilization (with color coding), VLANs, and maybe clickable elements to drill down into device details. Also, real-time traffic flow animations would be cool!",
+          "created_at": "2024-12-01T11:15:00Z"
+        },
+        {
+          "author": "ux-designer",
+          "content": "This could work well with our existing dashboard design. We could use D3.js for the visualization. Should be performant even with large networks.",
+          "created_at": "2024-12-01T11:30:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "slack_003",
+    "source_type": "slack",
+    "source_id": "C3456789012_1643725200.001",
+    "title": "Performance issue with large deployments",
+    "content": "⚠️ ALERT: Getting reports of slow dashboard performance from our largest customers. One with 5000+ devices says the interface is unusable during peak hours.\n\n@engineering Is this related to the database query optimization work we discussed last week?",
+    "author": "site-reliability",
+    "author_email": "sre@plexnet.com",
+    "created_at": "2024-12-01T14:00:00Z",
+    "metadata": {
+      "channel": "engineering",
+      "channel_id": "C3456789012",
+      "thread_ts": "1643725200.001",
+      "replies": [
+        {
+          "author": "backend-eng",
+          "content": "Checking the monitoring dashboards now. I can see some slow queries on the devices table. The N+1 query issue we thought we fixed might still be there. Let me investigate.",
+          "created_at": "2024-12-01T14:05:00Z"
+        },
+        {
+          "author": "database-admin",
+          "content": "I notice the query planner is choosing the wrong indexes for large result sets. We might need to add some composite indexes on (customer_id, updated_at) and (device_type, status).",
+          "created_at": "2024-12-01T14:20:00Z"
+        },
+        {
+          "author": "product-manager",
+          "content": "This is affecting multiple enterprise customers. Can we prioritize a hotfix? Should I reach out to the affected customers?",
+          "created_at": "2024-12-01T14:30:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "slack_004",
+    "source_type": "slack",
+    "source_id": "C4567890123_1643726400.001",
+    "title": "User feedback from community forum",
+    "content": "Just saw this on the community forum - user is frustrated with the mobile app:\n\n> \"The mobile app keeps crashing when I try to view device details. This makes it impossible to check network status when I'm not at my desk. Please fix this ASAP - it's really impacting my work.\"\n\nAnyone from @mobile-team looking into mobile app stability?",
+    "author": "community-manager",
+    "author_email": "community@plexnet.com",
+    "created_at": "2024-12-01T17:00:00Z",
+    "metadata": {
+      "channel": "product-feedback",
+      "channel_id": "C4567890123",
+      "thread_ts": "1643726400.001",
+      "replies": [
+        {
+          "author": "mobile-dev",
+          "content": "Thanks for flagging this. We did release a fix for device detail crashes in v1.2.2 last week, but it seems some users haven't updated yet. The crash is related to null pointer exceptions when device metadata is missing. Should be resolved in the latest version.",
+          "created_at": "2024-12-01T17:15:00Z"
+        },
+        {
+          "author": "qa-mobile",
+          "content": "I've been testing the fix and it's working well. But we should probably add a prompt to encourage users to update the app when they encounter this.",
+          "created_at": "2024-12-01T17:30:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "slack_005",
+    "source_type": "slack",
+    "source_id": "C5678901234_1643727000.001",
+    "title": "Competitor analysis: NetWatch launched new AI features",
+    "content": "@product-team FYI: Our competitor NetWatch just announced AI-powered network anomaly detection. They're using machine learning to predict network failures before they happen.\n\nThis could be a good feature for us to consider. Thoughts on adding predictive analytics to our roadmap?",
+    "author": "competitive-intel",
+    "author_email": "intel@plexnet.com",
+    "created_at": "2024-12-01T18:30:00Z",
+    "metadata": {
+      "channel": "strategy",
+      "channel_id": "C5678901234",
+      "thread_ts": "1643727000.001",
+      "replies": [
+        {
+          "author": "product-manager",
+          "content": "Interesting! I've been thinking about this too. We have the data to do predictive analytics, but we'd need to invest in ML infrastructure. Could be a differentiator for enterprise customers. Let me add this to our next roadmap discussion.",
+          "created_at": "2024-12-01T19:00:00Z"
+        },
+        {
+          "author": "data-scientist",
+          "content": "We could start with simpler predictive models using time-series analysis of historical performance data. Don't need full ML infrastructure for initial version. I can put together a proof of concept.",
+          "created_at": "2024-12-01T19:15:00Z"
+        },
+        {
+          "author": "ceo",
+          "content": "This aligns with our AI-first strategy. Let's explore what we can do here. Could be a major selling point.",
+          "created_at": "2024-12-01T20:00:00Z"
+        }
+      ]
+    }
+  }
+]
